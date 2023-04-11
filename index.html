@@ -7,18 +7,103 @@
     <title>Welcome</title>
 </head>
 <body>
-    hello! My Name is kartik 
-     i'm begginer for coding and soon going  to be kickass coder.
-
-     currently i have a knowledge on 
-     1.html
-     2 css
-     3 javascript
-     4 java
-    
-     soon too be..
-     react
-     ui/ux
-     and many more
+    <script>import chalk from 'chalk';
+        readlinesync = require("readline-sync")
+        
+        var score =0;
+         var userName = readlinesync.question("What is your name? ")
+        console.log("Hello!.. " + userName + " Welcome to the Quiz Game " );
+        console.log("*********Rule*******");
+        console.log("1:negative mark one wrong 1 score less.") 
+        console.log("*************************")
+        
+        
+        function play(question,answer){
+          var userAnswer =  readlinesync.question(question)
+          if(userAnswer == answer){
+            console.log(" YAH!!...You select right answer");
+            score = score + 1 ;
+          }
+          else {
+            console.log("OHH!! you just missed it ");
+            score = score - 1 ;
+          } 
+          console.log("Your score is : " , score);
+          console.log("............")
+        }
+        
+        let question = [{question: `Q.1 India is a federal union comprising twenty-eight states and how many union territories?
+        a. 6
+        b. 7
+        c. 8
+        d. 9 \n`,
+        answer: "c" },
+        {question: `Q.2 Which of the following is the capital of Arunachal Pradesh?
+        a. Itanagar
+        b. Dispur
+        c. Imphal
+        d. Panaji  \n`,
+        answer: "a" },
+        {question: `Q.3 What are the major languages spoken in Andhra Pradesh?
+        a. Odia and Telugu
+        b. Telugu and Urdu
+        c. Telugu and Kannada
+        d. All of the above languages \n`,
+        answer: "b" },
+        {question: `Q.4 What is the state flower of Haryana?
+        a. Lotus
+        b. Rhododendron
+        c. Golden Shower
+        d. Not Declared  \n`,
+        answer: "a" },
+        {question: `Q.5 In which of the following state, the main language is Khasi?
+        a. Nagaland
+        b. Tripura
+        c. Meghalaya
+        d. Mizoram \n`,
+        answer: "c" },
+        {question: `Q.6 In what state is Elephant Falls located?
+        a. Orissa
+        b. Mizoram
+        c. Manipur
+        d. Meghalaya  \n`,
+        answer: "d" },
+        {question: `Q.7 Yakshagana is the folk dance of which state?
+        a. Kerala
+        b. Karnataka
+        c. Tamil Nadu
+        d. Telangana \n`,
+        answer: "b" },
+        {question: `Q.8 What is the staple drink of Goa?
+        a. Feni
+        b. Toddy
+        c. Thandai
+        d. Sattu Sharbat  \n`,
+        answer: "a" },
+        {question: `Q.9 Which city is known as the “summer capital” of Jammu and Kashmir?
+        a. Shimla
+        b. Jammu
+        c. Srinagar
+        d. Anantnag \n`,
+        answer: "c" },
+        {question: `Q.10 Which state of India celebrates Hunter Holi, an 800-year tradition?
+        a. Uttar Pradesh  
+        b. Delhi
+        c. Haryana
+        d. Punjab  \n`,
+        answer: "c" },]
+        for (let i =0; i<question.length; i++){
+          var currentQuestion = question[i];
+          play(currentQuestion.question, currentQuestion.answer)
+        }
+        if(score == 10){
+          console.log(" Dam! extra-Ordinary you have a bright future");
+        }
+        else if( score ==9 || score == 8|| score == 7 || score == 6 || score ==5 ){
+          console.log("Good quite empressive");
+        }
+        else{
+          console.log("OH!!! you have to work hard study hard and have some knowledge about india ");
+        }</script>
 </body>
 </html>
