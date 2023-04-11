@@ -1,3 +1,3 @@
-# Student-website
- First website Porfolio
-Hey there we will start learing new thing and concepts about github and web devlopment.
+# Quiz- Game
+ First CLI APP 
+ Quiz game how much you about India.
